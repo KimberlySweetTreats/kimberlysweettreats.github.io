@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+	
+	<style>
+	
+	
+	
+	
+	
+		
+	
+	
+	.button{
+	background-color:#6B3F27;
+	padding :8px 6px;
+	font-size: 16px;
+	cursor:pointer;
+	border-radius:9px;
+    font-weight:bold;
+	
+	}
+	.button:hover{
+	background-color:#D2691E;
+	}
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EFE1C2;
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.logo {
+font-size: 1.5rem;
+	font-family:'pacifico',cursive;
+	letter-spacing:1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+	
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.hamburger {
+    font-size: 2.0rem;
+    cursor: pointer;
+    display: none;
+	        	
+}
+
+
+       
+
+
+/* Mobile view */
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        top: 10%;
+        right: 100%;
+        width: 40%;
+        height: calc(100vh - 70px);
+        background: #EFE1C2;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s;
+
+    }
+
+    .nav-links.active {
+        right: 0;
+    }  
+	
+    .hamburger {
+        display: block;
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+   body {
+      font-family: 'Verdana', sans-serif;
+      background-color: #fff8f0;
+      color: #8B5E3C;
+      margin: 0;
+      padding: 0;
+    }
+
+   
+    
+
+
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .box {
+      background-color: #fff8f0;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .box h2, .box h3 {
+      font-size: 24px;
+      color: #d2691e;
+      margin-bottom: 15px;
+	  text-align:center;
+    }
+
+    .box p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .image-center {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .image-center img {
+      width: 450px;
+	  height:400px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	  
+    }
+
+    .mission-box {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #fff8f0;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .mission-box h3 {
+      font-size: 22px;
+      color: #d2691e;
+      margin-bottom: 10px;
+	  text-align:center;
+    }
+
+    .mission-box p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+         <nav class="logo">  <img src="logo.png" width="90" height="90" >Love at first bite</nav>  
+        <ul class="nav-links">
+            <li><a href="unit4.html">Home</a> |</li>
+            <li><a href="unit1.html">About</a> |</li>
+            <li><a href="menu.html">Our menu</a> |</li>
+            <li><a href="unit3.html">Contact</a> |</li>    
+			<li><a href="unit5.html">products</a></li>
+			
+        </ul>
+  
+<div style="margin-top:20px;">	<button class="button"><a href= "unit2.html" style="color:black;text-decoration:none;">Order Now!</a></button> </div>
+			      <div class="hamburger">☰</div>
+        		</nav>
+   
+    <script>
+       
+	  	   
+	const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});    
+  
+    </script>
+
+
+
+  <div class="content-wrapper">
+    <section class="box">
+      <h2>About Us</h2>
+      <p>
+        At Kimberley's Sweet Treats, we believe every celebration deserves a touch of sweetness!
+        What started as a small kitchen passion in the heart of Kimberley, grew into a full-on bakery where every cupcake, cookie, and cake is made with love.
+        We take pride in using the best ingredients, adding our own sprinkle of creativity, and putting smiles on our customers’ faces.
+      </p>
+    </section>
+
+    <section class="box">
+      <h3>Our Story</h3>
+      <p>
+        Kimberley's Sweet Treats was born out of late-night baking experiments, family birthdays, and a love for making people happy through sweets.
+        The idea came during a lockdown, when baking became not only a hobby, but a way to connect with friends and family.
+        With support from our community, family, this website was built to bring our treats to everyone in Kimberley and beyond.
+      </p>
+    </section>
+  </div>
+
+  <div class="image-center">
+    <img src="deliciouscake.jpg" alt="deliciouscake.jpg">
+	<img src="yummycake.jpg" alt="yummycake.jpg">
+  </div>
+
+  <section class="mission-box">
+    <h3>Our Mission</h3>
+    <p>
+      At Kimberley's Sweet Treats, our mission is to spread joy, one sweet treat at a time.
+      We are dedicated to crafting delicious, high-quality baked goods that bring people together and make life's moments a little sweeter.
+    </p>
+  </section>
+
+
+
+</body>
+</html>

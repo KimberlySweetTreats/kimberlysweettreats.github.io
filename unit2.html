@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Local Order Form - Pay on Delivery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #d2691e;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #d2691e;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #a0522d;
+    }
+    #confirmation {
+      display: none;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+    #confirmation h3 {
+      color: #d2691e;
+      text-align: center;
+    }
+    .order-summary {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+   
+.logo {
+font-size: 1.5rem;
+	font-family:'pacifico',cursive;
+	letter-spacing:1px;
+}
+  </style>
+</head>
+<body>
+   <nav class="logo">  <img src="logo.png" width="90" height="90" >Love at first bite</nav>
+
+
+
+
+<h2>Local Order Form – Pay on Delivery</h2>
+<form id="orderForm">
+  
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" required>
+  
+  <label for="address">Delivery Address:</label>
+  <textarea id="address" name="address" rows="3" required></textarea>
+  
+  <label for="date">Preferred Delivery Date:</label>
+  <input type="date" id="date" name="delivery_date" required>
+
+  <label for="time">Preferred Time Slot:</label>
+  <select id="time" name="time_slot" required>
+    <option value="">-- Select a time slot --</option>
+    <option value="10am-12pm">10am – 12pm</option>
+    <option value="12pm-2pm">12pm – 2pm</option>
+    <option value="2pm-4pm">2pm – 4pm</option>
+    <option value="4pm-6pm">4pm – 6pm</option>
+  </select>
+
+  <label for="order">Order Details:</label>
+  <textarea id="order" name="order_details" rows="4" placeholder="e.g. 2 Chocolate Muffins, 1 Layered Carrot Cake" required></textarea>
+
+  <label for="notes">Special Instructions (optional):</label>
+  <textarea id="notes" name="special_instructions" rows="3"></textarea>
+
+  <label>Payment Method:</label>
+  <input type="text" value="Cash on Delivery" disabled>
+
+  <button type="button" onclick="submitOrder()">Place Order</button>
+</form>
+
+<div id="confirmation">
+  <h3>Order Submitted Successfully!</h3>
+  <p>Thank you for your order. Here's your order summary:</p>
+  
+  <div class="order-summary">
+    <p><strong>Name:</strong> <span id="summary-name"></span></p>
+    <p><strong>Phone:</strong> <span id="summary-phone"></span></p>
+    <p><strong>Address:</strong> <span id="summary-address"></span></p>
+    <p><strong>Delivery Date:</strong> <span id="summary-date"></span></p>
+    <p><strong>Time Slot:</strong> <span id="summary-time"></span></p>
+    <p><strong>Order Details:</strong> <span id="summary-order"></span></p>
+    <p><strong>Special Instructions:</strong> <span id="summary-notes"></span></p>
+    <p><strong>Payment Method:</strong> Cash on Delivery</p>
+  </div>
+  
+  <p>We'll contact you shortly to confirm your order. If you have any questions, please call us.</p>
+</div>
+
+<script>
+  function submitOrder() {
+    // Get form values
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const order = document.getElementById('order').value;
+    const notes = document.getElementById('notes').value;
+    
+    // Validate required fields
+    if (!name || !phone || !address || !date || !time || !order) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Display summary
+    document.getElementById('summary-name').textContent = name;
+    document.getElementById('summary-phone').textContent = phone;
+    document.getElementById('summary-address').textContent = address;
+    document.getElementById('summary-date').textContent = date;
+    document.getElementById('summary-time').textContent = time;
+    document.getElementById('summary-order').textContent = order;
+    document.getElementById('summary-notes').textContent = notes || 'None';
+    
+    // Hide form and show confirmation
+    document.getElementById('orderForm').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'block';
+    
+    // In a real application, you would send the data to a server here
+    // For example: 
+    // fetch('your-server-endpoint', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     name, phone, address, date, time, order, notes
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // });
+  }
+</script>
+
+</body>
+</html>

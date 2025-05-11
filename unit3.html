@@ -1,0 +1,308 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Contact</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	
+	<style>
+	
+	
+	
+	
+	
+	body{
+		background-color:#6B3F27;
+		margin:0;
+		padding:0;
+	font-family:"verdana", sans-serif;
+	}
+	
+	
+	
+		
+         .div1 {
+         display:flex;
+         align-items:flex-start ;
+         gap:10px ;
+         }
+         .div1 img{
+         width: 400px;
+          }
+.div2{
+display:flex;
+align-items:flex-start;
+gap :20px;
+
+}
+.div2 img{
+width:400px;
+
+}
+	
+	
+	.button{
+	background-color:#6B3F27;
+	padding :8px 6px;
+	font-size: 16px;
+	cursor:pointer;
+	border-radius:9px;
+    font-weight:bold;
+	
+	}
+	.button:hover{
+	background-color:#D2691E;
+	}
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EFE1C2;
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.logo {
+       font-size: 1.5rem;
+	font-family:'pacifico',cursive;
+	letter-spacing:1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+	
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.nav-links a:hover{
+text-decoration:underline;
+}
+
+
+
+.hamburger {
+    font-size: 2.0rem;
+    cursor: pointer;
+    display: none;
+	        	
+}
+
+
+       
+
+
+/* Mobile view */
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        top: 10%;
+        right: 100%;
+        width: 40%;
+               height: calc(100vh - 70px);
+        background: #EFE1C2;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s;
+
+    }
+
+    .nav-links.active {
+        right: 0;
+    }  
+	
+    .hamburger {
+        display: block;
+    }
+
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif, serif;
+      background-color: #f9f5f0; /* soft beige */
+      color: #3a2a1c; /* deep warm brown for text */
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background: linear-gradient(to bottom, #f9f2e8, #e8d8c3); /* soft warm tones */
+    }
+
+    .form-box {
+      background-color: #fffaf5; /* light ivory */
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #6b4226; /* dark chocolate brown */
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      margin: 15px 0 5px;
+      color: #4b2e2e; /* dark brown */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      border: 2px solid #6B3F27; /* muted warm brown */
+      border-radius: 10px;
+      background-color: #fffdfb;
+    }
+
+    .contact-options {
+      margin-top: 20px;
+    }
+
+    .contact-options label {
+      font-size: 1.2rem;
+      margin-right: 20px;
+      color: #4b2e2e;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+      background-color: #6B3F27; /* dark brown */
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3a221f; /* even deeper brown on hover */
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+	</style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+  <nav class="logo">  <img src="logo.png" width="90" height="90" >Love at first bite</nav>
+         
+        <ul class="nav-links">
+            <li><a href="unit4.html">Home</a> |</li>
+            <li><a href="unit1.html">About</a> |</li>
+            <li><a href="menu.html">Our menu</a> |</li>
+            <li><a href="unit3.html">Contact</a> |</li>    
+			<li><a href="unit5.html">products</a> |</li>
+			
+        </ul>
+  
+<div style="margin-top:20px;">	<button class="button"><a href= "unit2.html" style="color:black;text-decoration:none;">Order Now!</a></button> </div>
+			      <div class="hamburger">☰</div>
+        		</nav>
+   
+    <script>
+       
+	  	   
+	const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});    
+  
+    </script>
+
+
+
+
+
+
+
+
+  <div class="wrapper">
+    <form class="form-box">
+      <h1>Let’s Stay in Touch!</h1>
+
+      <label for="name">Your Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Your Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <div class="contact-options">
+        <label><input type="radio" name="contact" value="SMS" required> SMS</label>
+        <label><input type="radio" name="contact" value="Email"> Email</label>
+        <label><input type="radio" name="contact" value="WhatsApp"> WhatsApp</label>
+      </div>
+
+      <button type="submit" onclick="alert('information saved')">Save My Preferences</button>
+    </form>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

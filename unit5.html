@@ -1,0 +1,425 @@
+<!Doctype html>
+<head>
+<title>Products</title>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	
+	<style>
+	
+	
+	
+	body{
+	font-family:"verdana",san serifs
+	}
+
+	
+	.button{
+	background-color:#6B3F27;
+	padding :8px 6px;
+	font-size: 16px;
+	cursor:pointer;
+	border-radius:9px;
+    font-weight:bold;
+	
+	}
+	.button:hover{
+	background-color:#D2691E;
+	}
+	
+	
+	
+	
+	
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #EFE1C2;
+    color: black;
+    padding: 1rem 2rem;
+}
+
+.logo {
+
+    font-size: 1.5rem;
+	font-family:'pacifico',cursive;
+	letter-spacing:1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+	font-weight:16px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+text-decoration:underline;
+}
+
+.hamburger {
+    font-size: 2.0rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+       
+
+
+/* Mobile view */
+@media (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        top: 10%;
+        right: 100%;
+        width: 40%;
+        height: calc(100vh - 70px);
+        background: #EFE1C2;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+body{
+
+.gallery-section{
+padding:2em;
+text-align:center;
+background-color: #fff8f0;
+color:black;
+font-family:"Verdana", sans-serif;
+}
+
+.gallery-flex{
+display: flex;
+flex-wrap: wrap;
+gap:1 em;
+justify-content: center;
+}
+
+.gallery-item{
+flex:1 1 250px;
+max-width:300px;
+}
+
+.gallery-item img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.bottom-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.bottom-button button {
+  padding: 12px 24px;
+  background-color: #EFE1C2; /* Adjust as needed */
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-button button:hover {
+  background-color: #922f00;
+}
+	
+
+
+
+	</style>
+</head>
+
+
+<body>
+    <nav class="navbar">
+          <nav class="logo">  <img src="logo.png" width="90" height="90" >Love at first bite</nav>
+        <ul class="nav-links">
+            <li><a href="unit4.html">Home</a> |</li>
+            <li><a href="unit1.html">About</a> |</li>
+            <li><a href="menu.html">Our menu</a> |</li>
+            <li><a href="unit3.html">Contact</a> |</li>    
+			<li><a href="unit5.html">products</a></li>
+        </ul> 
+<div style="margin-top:20px;">	<button class="button"><a href= "unit2.html" style="color:black;text-decoration:none;">Order Now!</a></button> </div>
+		
+        <div class="hamburger">☰</div>
+    </nav>
+    <script>
+       
+	   
+	const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});   
+	   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Section class="gallery-section">
+<h2>Our Sweet Gallery</h2>
+<div class="gallery-flex">
+
+<div class="gallery-item">
+<img src="Coffee Cupcakes.jpg" alt="cupcakes"/>
+<p><b>Coffee Cupcakes</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="Macarons.jpg" alt="macrons"/>
+<p>Macarons</p>
+</div>
+
+<div class="gallery-item">
+<img src="cream filled pastry.jpg" alt="pastries"/>
+<p><b>Cream Filled Pastry</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="cookies.jpg" alt="cookies"/>
+<p><b>Cookies</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="Nutty Cupcakes.jpg" alt="cupcakes"/>
+<p><b>Nutty Cupcakes</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="croissants.jpg" alt="croissant"/>
+<p><b>Croissants</b><p>
+</div>
+
+<div class="gallery-item">
+<img src="pumpkin pie.jpg" alt="pies"/>
+<p><b>Pumpkin Pie</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="croissants..jpg" alt="croissant"/>
+<p><b>Croissants</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="queen cakes.jpg" alt="Queen cakes"/>
+<p><b>Queen Cakes</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="strawberry danish.jpg" alt="Danish"/>
+<p><b>Strawberry Danish</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="doughnuts.jpg" alt="doughnuts"/>
+<p><b>Doughnuts</b></b>
+</div>
+
+<div class="gallery-item">
+<img src="cream puff pastry.jpg" alt="pastry"/>
+<p><b>Cream Puff Pastry</b></p>
+</div>
+
+
+
+<div class="gallery-item">
+<img src="Blueberry Cake.jpg" alt="cake"/>
+<p><b>Blueberry Cake</b></p>
+</div>
+
+
+<div class="gallery-item">
+<img src="carrot cake.jpg" alt="cake"/>
+<p><b>Carrot Cake</b><p>
+</div>
+
+<div class="gallery-item">
+<img src="event3.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="wedding.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="event.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+</div>
+
+<div class="gallery-item">
+<img src="event 2.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="blueberry cake.jpg" alt="cake"/>
+<p><b>Blueberry Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="almond pie.jpg" alt="pastry"/>
+<p><b>Almond pie</b></p>
+
+</div>
+
+
+
+<div class="gallery-item">
+<img src="themed.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="unicorn cake.jpg" alt="cake"/>
+<p><b>Unicorn Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="mint cake.jpg" alt="cake"/>
+<p><b>Mint Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="Queen cakes.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="wedding.jpg" alt="cake"/>
+<p><b>Wedding/Event Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="strawberry filled cake.jpg" alt="cake"/>
+<p><b>Strawberry filled Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="macaron cake.jpg" alt="cake"/>
+<p><b>Macaron Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="fruit cakes.jpg" alt="cake"/>
+<p><b>Fruit Cakes</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="strawberry cupcakes.jpg" alt="cake"/>
+<p><b>Strawberry Cupcakes</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="chocolate sticks.jpg" alt="cake"/>
+<p><b>Kit Kat Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="strawberry cake cake.jpg" alt="cake"/>
+<p><b>Strawberry Cake Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="brownie.jpg" alt="cake"/>
+<p><b>Brownie</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="chocolate fudge cake.jpg" alt="cake"/>
+<p><b>Chocolate Fudge Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="cherry cake.jpg" alt="cake"/>
+<p><b>Cherry Cake</b></p>
+
+</div>
+
+<div class="gallery-item">
+<img src="cherry filled chocolate cake.jpg" alt="cake"/>
+<p><b>Cherry Filled Chocolate Cake</b></p>
+
+ 
+</div>
+
+
+<div class="bottom-button">
+  <button onclick="window.location.href='menu.html'">check out our menu</button>
+</div>
+
+</body>
+</html>
